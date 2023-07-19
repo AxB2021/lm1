@@ -51,9 +51,7 @@ with col1:
     st.markdown("hello")
 
 with col2:
-
-
-st.markdown("## Enter Your Email To Convert")
+    st.markdown("## Enter Your Email To Convert")
 
 def get_api_key():
     input_text = st.text_input(label="OpenAI API Key ",  placeholder="Ex: sk-2twmA8tfCb8un4...", key="openai_api_key_input")
