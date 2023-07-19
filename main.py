@@ -46,12 +46,12 @@ def load_LLM(openai_api_key):
     return llm
 
 st.set_page_config(page_title="Draft my email", page_icon=":robot:")
-st.header("Globalize Text")
+st.header("Draft my email")
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("Enter Your Email To Convert")
+    st.markdown("What would you like to say?")
 
 with col2:
     st.markdown("")
