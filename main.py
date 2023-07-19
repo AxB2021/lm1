@@ -45,16 +45,16 @@ def load_LLM(openai_api_key):
     llm = OpenAI(temperature=.7, openai_api_key=openai_api_key)
     return llm
 
-st.set_page_config(page_title="Globalize Email", page_icon=":robot:")
+st.set_page_config(page_title="Draft my email", page_icon=":robot:")
 st.header("Globalize Text")
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("hello")
+    st.markdown("Enter Your Email To Convert")
 
 with col2:
-    st.markdown("## Enter Your Email To Convert")
+    st.markdown("")
 
 OPENAI_API_KEY = OPENAI_API_KEY
 
