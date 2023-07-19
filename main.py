@@ -1,6 +1,9 @@
+import os
 import streamlit as st
 from langchain import PromptTemplate
 from langchain.llms import OpenAI
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+OpenAI.api_key = os.getenv("OPENAI_API_KEY")
 
 template = """
     Below is an email that may be poorly worded.
@@ -57,7 +60,7 @@ def get_api_key():
     input_text = st.text_input(label="OpenAI API Key ",  placeholder="Ex: sk-2twmA8tfCb8un4...", key="openai_api_key_input")
     return input_text
 
-openai_api_key = get_api_key()
+openai_api_key = OpenAI.api_key
 
 col1, col2 = st.columns(2)
 with col1:
