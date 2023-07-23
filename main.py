@@ -35,7 +35,7 @@ template = """
 """
 
 prompt = PromptTemplate(
-    input_variables=["tone", "dialect", "email"],
+    input_variables=["formal", "British", "email"],
     template=template,
 )
 
