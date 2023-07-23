@@ -11,8 +11,8 @@ template = """
     - Properly format the email
     - Convert the input text to a specified tone
     - Convert the input text to a specified dialect
-    - Start the email with the oppening Thank you for contacting Remi Online.
-    - Close the email with Remi Online Support Team
+    - Start the email with the oppening Thank you for contacting School24.
+    - Close the email with School24 Online Support Team
 
     Here are some examples different Tones:
     - Formal: We went to Barcelona for the weekend. We have a lot of things to tell you.
