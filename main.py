@@ -28,14 +28,14 @@ template = """
     
     Below is the email, tone, and dialect:
     TONE: {tone}
-    DIALECT:"British"
+    DIALECT:{"dialect"}
     EMAIL: {email}
     
-    YOUR {dialect} RESPONSE:
+    
 """
 
 prompt = PromptTemplate(
-    input_variables=["formal", "British", "email"],
+    input_variables=["tone", "dialect", "email"],
     template=template,
 )
 
@@ -57,17 +57,9 @@ with col2:
     st.markdown("")
 
 OPENAI_API_KEY = OPENAI_API_KEY
+option_tone = "Formal"
+option_dialect ="British"
 
-col1, col2 = st.columns(2)
-with col1:
-    option_tone = st.selectbox(
-        'Which tone would you like your email to have?',
-        ('Formal', 'Informal'))
-    
-#with col2:
-    #option_dialect = st.selectbox(
-        #'Which English Dialect would you like?',
-        #('American', '', 'Australian'))
 
 
 
