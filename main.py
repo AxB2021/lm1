@@ -51,7 +51,7 @@ st.header("Draft my email")
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("What would you like to say?")
+    st.markdown("You can use this tool to help with drafting quick emails.")
 
 with col2:
     st.markdown("")
@@ -64,11 +64,12 @@ with col1:
         'Which tone would you like your email to have?',
         ('Formal', 'Informal'))
     
-with col2:
-    option_dialect = st.selectbox(
-        'Which English Dialect would you like?',
-        ('American', 'British'))
+#with col2:
+    #option_dialect = st.selectbox(
+        #'Which English Dialect would you like?',
+        #('American', '', 'Australian'))
 
+dialect ="British"
 def get_text():
     input_text = st.text_area(label="Email Input", label_visibility='collapsed', placeholder="Your Email...", key="email_input")
     return input_text
@@ -81,11 +82,11 @@ if len(email_input.split(" ")) > 700:
 
 def update_text_with_example():
     print ("in updated")
-    st.session_state.email_input = "Sally I am starts work at yours monday from dave"
+    st.session_state.email_input = "Thank you for reporting the issue"
 
 st.button("*See An Example*", type='secondary', help="Click to see an example of the email you will be converting.", on_click=update_text_with_example)
 
-st.markdown("### Your Converted Email:")
+st.markdown("### Here is one vesrion you can try:")
 
 if email_input:  
 
