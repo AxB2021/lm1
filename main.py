@@ -28,7 +28,7 @@ template = """
     
     Below is the email, tone, and dialect:
     TONE: {tone}
-    DIALECT: {dialect}
+    DIALECT:"British"
     EMAIL: {email}
     
     YOUR {dialect} RESPONSE:
@@ -69,7 +69,8 @@ with col1:
         #'Which English Dialect would you like?',
         #('American', '', 'Australian'))
 
-dialect ="British"
+
+
 def get_text():
     input_text = st.text_area(label="Email Input", label_visibility='collapsed', placeholder="Your Email...", key="email_input")
     return input_text
