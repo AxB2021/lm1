@@ -46,7 +46,7 @@ def load_LLM(openai_api_key):
     return llm
 
 st.set_page_config(page_title="Draft my email", page_icon=":robot:")
-st.header("Draft my email")
+st.header("Quick Email Draft")
 
 col1, col2 = st.columns(2)
 
@@ -57,16 +57,6 @@ with col2:
     st.markdown("")
 
 OPENAI_API_KEY = OPENAI_API_KEY
-col1, col2 = st.columns(2)
-with col1:
-    option_tone = st.selectbox(
-        'Which tone would you like your email to have?',
-        ('Formal', 'Informal'))
-    
-with col2:
-    option_dialect = st.selectbox(
-        'Which English Dialect would you like?',
-        ('American', 'British'))
 
 
 
@@ -88,6 +78,8 @@ st.button("*See An Example*", type='secondary', help="Click to see an example of
 
 st.markdown("### Here is one vesrion you can try:")
 
+option_tone = "Formal"
+option_dialect = "British"
 if email_input:  
 
     llm = load_LLM(openai_api_key=OPENAI_API_KEY)
