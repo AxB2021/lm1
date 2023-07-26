@@ -78,7 +78,7 @@ def update_text_with_example():
 
 st.button("*See An Example*", type='secondary', help="Click to see an example of the email you will be converting.", on_click=update_text_with_example)
 
-st.markdown("### Here is one version to get you started:")
+st.markdown("### Have a look at the generated email and make changes as required:")
 
 option_tone = "Formal"
 option_dialect = "British"
